@@ -135,7 +135,7 @@ public class Gameplay : MonoBehaviour
 	{
 		for( int count = 0; count < mBlocks.Count; count++ )
 		{
-			mBlocks[count].gameObject.SetActive( false );
+			mBlocks[count].Deactivate();
 		}
 
 		mBlocks.Clear();

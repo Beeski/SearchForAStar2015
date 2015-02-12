@@ -8,8 +8,9 @@ public class Block : MonoBehaviour
     private Quaternion mStartingRotation;
 	private Vector3 mStartingPosition;
 
-	public float Score { get { return ScoreForAvoid; } set { ScoreForAvoid = value; } }
+	public float Score { get { return DisableScore ? 0.0f : ScoreForAvoid; } }
     public bool InContactWithFloor { get; set; }
+	public bool DisableScore { get; set; }
 
     void Awake()
     {
@@ -34,5 +35,6 @@ public class Block : MonoBehaviour
 		rigidbody.angularVelocity = Vector3.zero;
 		gameObject.SetActive( false );
 		InContactWithFloor = false;
+		DisableScore = false;
 	}
 }

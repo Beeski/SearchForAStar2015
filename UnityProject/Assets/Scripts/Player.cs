@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
 		Block ob = collision.gameObject.GetComponent<Block>();
 		if( ob != null )
 		{
-			ob.Score = 0.0f;
+			ob.DisableScore = true;
 			mTimeSinceLifeLost = 0.0f;
 			Lives--;
 		}
